@@ -13,5 +13,7 @@ public class AreaRectangle {
         int areaRectangle = base*altura;
 
         System.out.println("A área do seu retângulo é: " + areaRectangle + "m²");
+        
+        scanner.close();  // Close the scanner
     }
   }
