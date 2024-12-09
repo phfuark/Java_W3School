@@ -1,9 +1,7 @@
-package number_guessing;
-
 import java.util.Scanner;
 
-public class Main {
-    static void NumberGuessing() {
+public class NumberGuessing {
+    static void Number_Guessing() {
         Scanner myScanner = new Scanner(System.in);
 
         int randomNum = (int)(Math.random() * 101); // Número aleatório entre 0 e 100
@@ -42,6 +40,6 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        NumberGuessing();
+        Number_Guessing();
     }
 }

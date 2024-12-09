@@ -1,9 +1,7 @@
-package grading_system;
-
 import java.util.Scanner;
 
 class Main {
-    static void GradingSystem() {
+    static void Grading_System() {
         Scanner myScanner = new Scanner(System.in);
 
         for (int i = 1; i <= 3; i++) {
@@ -31,6 +29,6 @@ class Main {
     }
 
     public static void main(String[] args) {
-        GradingSystem();
+        Grading_System();
     }
 }

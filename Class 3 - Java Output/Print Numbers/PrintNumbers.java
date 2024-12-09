@@ -1,4 +1,4 @@
-public class Main {
+public class PrintNumbers {
     public static void main(String[] args) {
         //You can println numbers
         System.out.println(3);

@@ -1,9 +1,7 @@
-package bill_calculator;
-
 import java.util.ArrayList; // import the ArrayList class
 
-public class Main {
-    static void BillCalculator(){
+public class BillCalculator {
+    static void Bill_Calculator(){
         ArrayList<String> Comidas = new ArrayList<String>(); // Create an ArrayList object
         Comidas.add("BANANA");
         Comidas.add("MAÇA");
@@ -23,6 +21,6 @@ public class Main {
 
    
     public static void main(String[] args){
-        BillCalculator();
+        Bill_Calculator();
     }
 }
