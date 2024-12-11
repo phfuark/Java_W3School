@@ -24,7 +24,7 @@ public class BillCalculator {
         double totalCompra = 0.0;
 
         System.out.println("Produtos disponíveis:");
-        for (int i = 0; i < produtos.length; i++) {
+        for (int i = 1; i < produtos.length; i++) {
             System.out.printf("%d: %s - R$%.2f\n", i, produtos[i], precos[i]);
         }
 
@@ -44,8 +44,9 @@ public class BillCalculator {
                 double preco = precos[escolha];
                 int estoque_produto = estoque[escolha];
                 
+                System.out.printf("Quantos do produto %s você deseja? ", produto);
+                int quantidade = myScanner.nextInt();
             }
-
         }
     }
 
