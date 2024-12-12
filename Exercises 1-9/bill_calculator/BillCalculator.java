@@ -22,6 +22,7 @@ public class BillCalculator {
 
 
         double totalCompra = 0.0;
+        double totalProduto= 0.0;
 
         System.out.println("Produtos disponíveis:");
         for (int i = 1; i < produtos.length; i++) {
@@ -29,7 +30,7 @@ public class BillCalculator {
         }
 
         while (true) {
-            System.out.printf("Digite o número correspondente ao produto que você deseja, ou digite '0' para finalizar o processo.");
+            System.out.printf("Digite o número correspondente ao produto que você deseja, ou digite '0' para finalizar o processo: ");
             int escolha = myScanner.nextInt();
 
             if (escolha==0){
@@ -37,7 +38,7 @@ public class BillCalculator {
                 break;
             }
             else if (escolha < 0){
-                System.out.println("Opção inválida, digite um número novamente.");
+                System.out.println("Opção inválida, digite um número novamente.\n");
             }
             else{
                 String produto = produtos[escolha];
@@ -46,6 +47,18 @@ public class BillCalculator {
                 
                 System.out.printf("Quantos do produto %s você deseja? ", produto);
                 int quantidade = myScanner.nextInt();
+
+                if(estoque_produto<quantidade){
+                    System.out.printf("Ops! temos apenas %d do produto %s\n", estoque_produto, produto);
+                }
+
+                else{
+                    estoque_produto -= quantidade;
+                    totalProduto += quantidade * preco;
+                    totalCompra += totalProduto;
+
+                    System.out.printf("%d unidades do produto %s foram adicionadas ao carrinho por: %.2f\n", quantidade, produto, totalProduto);
+                }
             }
         }
     }
